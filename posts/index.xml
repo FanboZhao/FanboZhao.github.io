@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Fanbo&#39;s Blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>zhaofanbo.com/posts/</link>
     <description>Recent content in Posts on Fanbo&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="zhaofanbo.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Function Test</title>
-      <link>http://localhost:1313/posts/helloworld/</link>
+      <link>zhaofanbo.com/posts/helloworld/</link>
       <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/helloworld/</guid>
+      <guid>zhaofanbo.com/posts/helloworld/</guid>
       <description>&lt;h1 id=&#34;helloworld&#34;&gt;&#xA;  Hello,world!!!!!&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#helloworld&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;</description>
     </item>
   </channel>

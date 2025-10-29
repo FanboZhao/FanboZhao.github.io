@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Fanbo&#39;s Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>zhaofanbo.com/categories/</link>
     <description>Recent content in Categories on Fanbo&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="zhaofanbo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Something</title>
-      <link>http://localhost:1313/categories/something/</link>
+      <link>zhaofanbo.com/categories/something/</link>
       <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/something/</guid>
+      <guid>zhaofanbo.com/categories/something/</guid>
       <description></description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/categories/test/</link>
+      <link>zhaofanbo.com/categories/test/</link>
       <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/test/</guid>
+      <guid>zhaofanbo.com/categories/test/</guid>
       <description></description>
     </item>
   </channel>
