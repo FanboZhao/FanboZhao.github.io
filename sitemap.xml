@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>zhaofanbo.com/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/posts/helloworld/</loc>
+    <loc>//localhost:1313/posts/helloworld/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/posts/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/categories/something/</loc>
+    <loc>//localhost:1313/categories/something/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/categories/test/</loc>
+    <loc>//localhost:1313/categories/test/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>zhaofanbo.com/tags/test/</loc>
+    <loc>//localhost:1313/tags/test/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url>
 </urlset>
