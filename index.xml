@@ -22,5 +22,12 @@
       <guid>https://zhaofanbo.com/about/</guid>
       <description>&lt;h1 id=&#34;my-introduction&#34;&gt;&#xA;  My Introduction&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#my-introduction&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Not begin to write yet.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Contact</title>
+      <link>https://zhaofanbo.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://zhaofanbo.com/contact/</guid>
+      <description>&lt;p&gt;My email: &lt;a href=&#34;mailto:zhaofanbo618@gmail.com&#34; &gt;zhaofanbo618@gmail.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Email me if you&amp;rsquo;re interested in me.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
