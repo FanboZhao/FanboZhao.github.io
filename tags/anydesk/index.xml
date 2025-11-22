@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anydesk on Fanbo&#39;s Blog</title>
+    <link>http://localhost:1313/tags/anydesk/</link>
+    <description>Recent content in Anydesk on Fanbo&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/anydesk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anydesk在ubuntu22.04上无法正常远程连接</title>
+      <link>http://localhost:1313/posts/anydesk/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/anydesk/</guid>
+      <description>&lt;h1 id=&#34;issue&#34;&gt;&#xA;  Issue&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#issue&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;在用其他电脑远程连接&lt;code&gt;ubuntu22.04&lt;/code&gt;上的&lt;code&gt;Anydesk&lt;/code&gt;时无法正常连接，显示&lt;code&gt;The session has ended.Status: display_server_not_supported&lt;/code&gt;&#xA;并且&lt;code&gt;ubuntu&lt;/code&gt;端的部分涉及安全的设置无法解锁。&lt;/p&gt;&#xA;&lt;h1 id=&#34;reason&#34;&gt;&#xA;  Reason&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#reason&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;code&gt;ubuntu&lt;/code&gt;可能使用&lt;code&gt;Wayland&lt;/code&gt;而不是&lt;code&gt;Xorg&lt;/code&gt;作为&lt;code&gt;Display Server&lt;/code&gt;，导致&lt;code&gt;Anydesk&lt;/code&gt;的兼容不好。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看当前的Display Server&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo $XDG_SESSION_TYPE&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;solution&#34;&gt;&#xA;  Solution&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#solution&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;退出登录但不要关机（右上角&lt;code&gt;Logout&lt;/code&gt;）&lt;/li&gt;&#xA;&lt;li&gt;登录界面点击右下角齿轮，选择&lt;code&gt;Ubuntu on Xorg&lt;/code&gt;即可解决问题&lt;/li&gt;&#xA;&lt;li&gt;如果你想彻底让系统永远用&lt;code&gt;Xorg&lt;/code&gt;，可以修改&lt;code&gt;GDM&lt;/code&gt;配置：&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo nano /etc/gdm3/custom.conf&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;找到这一行（可能被注释掉了）：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#WaylandEnable=false&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;把前面的 # 去掉，让它变成：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;WaylandEnable=false&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;保存退出并重启，系统就会默认使用&lt;code&gt;Xorg&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
