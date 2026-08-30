@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes along the way on Fanbo Zhao</title><link>https://zhaofanbo.com/en/posts/</link><description>Recent content in Notes along the way on Fanbo Zhao</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 22 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaofanbo.com/en/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Fixing an AnyDesk connection on Ubuntu 22.04</title><link>https://zhaofanbo.com/en/posts/anydesk/</link><pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/posts/anydesk/</guid><description>&lt;h2 id="the-issue"&gt;The issue&lt;/h2&gt;
+&lt;p&gt;When connecting remotely to an Ubuntu 22.04 computer using AnyDesk, the connection failed with this message:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;The session has ended.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Status: display_server_not_supported
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some security-related settings on the Ubuntu computer also could not be unlocked.&lt;/p&gt;
+&lt;h2 id="investigating-the-display-server"&gt;Investigating the display server&lt;/h2&gt;
+&lt;p&gt;Ubuntu may be running &lt;strong&gt;Wayland&lt;/strong&gt; instead of &lt;strong&gt;Xorg&lt;/strong&gt;. In this setup, switching to Xorg resolved the AnyDesk connection issue.&lt;/p&gt;
+&lt;p&gt;Check the current session type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007020"&gt;echo&lt;/span&gt; &lt;span style="color:#bb60d5"&gt;$XDG_SESSION_TYPE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="switch-to-xorg-for-the-session"&gt;Switch to Xorg for the session&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Log out of Ubuntu without shutting down the computer.&lt;/li&gt;
+&lt;li&gt;On the login screen, choose the gear icon and select &lt;strong&gt;Ubuntu on Xorg&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Log back in and try the connection again.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="make-xorg-the-default-if-needed"&gt;Make Xorg the default, if needed&lt;/h2&gt;
+&lt;p&gt;Edit the GDM configuration:&lt;/p&gt;</description></item><item><title>A practical Conda command reference</title><link>https://zhaofanbo.com/en/posts/conda/</link><pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/posts/conda/</guid><description>&lt;h2 id="create-an-environment"&gt;Create an environment&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Create an environment with a specific Python version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create -n myenv &lt;span style="color:#bb60d5"&gt;python&lt;/span&gt;&lt;span style="color:#666"&gt;=&lt;/span&gt;3.10
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Install packages while creating the environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create -n myenv &lt;span style="color:#bb60d5"&gt;python&lt;/span&gt;&lt;span style="color:#666"&gt;=&lt;/span&gt;3.10 numpy pandas
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="activate-and-deactivate"&gt;Activate and deactivate&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda activate myenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda deactivate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="list-and-remove-environments"&gt;List and remove environments&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env list
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Remove the environment and all packages inside it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda remove -n myenv --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-and-remove-packages"&gt;Install and remove packages&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda install numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda install &lt;span style="color:#bb60d5"&gt;numpy&lt;/span&gt;&lt;span style="color:#666"&gt;=&lt;/span&gt;1.26
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda remove numpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="update-packages"&gt;Update packages&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda update numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda update conda
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda update --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="export-and-recreate-an-environment"&gt;Export and recreate an environment&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Export the environment, including channel information&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env &lt;span style="color:#007020"&gt;export&lt;/span&gt; &amp;gt; environment.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Recreate the environment from the exported file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env create -f environment.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="clone-an-environment-and-inspect-packages"&gt;Clone an environment and inspect packages&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create --name newenv --clone oldenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>

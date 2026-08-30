@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fanbo Zhao</title><link>https://zhaofanbo.com/en/</link><description>Recent content on Fanbo Zhao</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaofanbo.com/en/index.xml" rel="self" type="application/rss+xml"/><item><title>SmartFly: from perception to action</title><link>https://zhaofanbo.com/en/projects/smartfly/</link><pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/projects/smartfly/</guid><description>&lt;p&gt;&lt;strong&gt;Research in progress · August 2026 snapshot&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SmartFly asks: &lt;strong&gt;how can an agent use vision, odor, and wind to stay stable and find a target?&lt;/strong&gt; Built around a MuJoCo fly simulation, the project combines a learned high-level navigation policy with a frozen low-level flight controller to explore the relationship between perception, memory, and action.&lt;/p&gt;
+&lt;h2 id="research-questions"&gt;Research questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Can one policy support two navigation tasks?&lt;/strong&gt; The visual task provides relative target information. The vision–odor task hides the source location and uses odor, apparent wind, and vision for source seeking and obstacle avoidance. The goal is to support both tasks with the same checkpoint.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How do visual priors relate to representations and behavior?&lt;/strong&gt; The comparison uses a trainable CNN and FlyVis with a frozen pretrained backbone, under matched tasks and training budgets.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What separates a demonstration from reliable evidence?&lt;/strong&gt; Stable-flight replays help inspect closed-loop behavior and actual policy inputs. Full navigation claims require independent testing and statistics across training seeds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="current-implementation"&gt;Current implementation&lt;/h2&gt;
+&lt;p&gt;The project uses &lt;strong&gt;Python, PyTorch, Ray RLlib / PPO, MuJoCo, and dm_control&lt;/strong&gt;, with four main components:&lt;/p&gt;</description></item><item><title>Fixing an AnyDesk connection on Ubuntu 22.04</title><link>https://zhaofanbo.com/en/posts/anydesk/</link><pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/posts/anydesk/</guid><description>&lt;h2 id="the-issue"&gt;The issue&lt;/h2&gt;
+&lt;p&gt;When connecting remotely to an Ubuntu 22.04 computer using AnyDesk, the connection failed with this message:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;The session has ended.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Status: display_server_not_supported
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some security-related settings on the Ubuntu computer also could not be unlocked.&lt;/p&gt;
+&lt;h2 id="investigating-the-display-server"&gt;Investigating the display server&lt;/h2&gt;
+&lt;p&gt;Ubuntu may be running &lt;strong&gt;Wayland&lt;/strong&gt; instead of &lt;strong&gt;Xorg&lt;/strong&gt;. In this setup, switching to Xorg resolved the AnyDesk connection issue.&lt;/p&gt;
+&lt;p&gt;Check the current session type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#007020"&gt;echo&lt;/span&gt; &lt;span style="color:#bb60d5"&gt;$XDG_SESSION_TYPE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="switch-to-xorg-for-the-session"&gt;Switch to Xorg for the session&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Log out of Ubuntu without shutting down the computer.&lt;/li&gt;
+&lt;li&gt;On the login screen, choose the gear icon and select &lt;strong&gt;Ubuntu on Xorg&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Log back in and try the connection again.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="make-xorg-the-default-if-needed"&gt;Make Xorg the default, if needed&lt;/h2&gt;
+&lt;p&gt;Edit the GDM configuration:&lt;/p&gt;</description></item><item><title>A practical Conda command reference</title><link>https://zhaofanbo.com/en/posts/conda/</link><pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/posts/conda/</guid><description>&lt;h2 id="create-an-environment"&gt;Create an environment&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Create an environment with a specific Python version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create -n myenv &lt;span style="color:#bb60d5"&gt;python&lt;/span&gt;&lt;span style="color:#666"&gt;=&lt;/span&gt;3.10
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Install packages while creating the environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create -n myenv &lt;span style="color:#bb60d5"&gt;python&lt;/span&gt;&lt;span style="color:#666"&gt;=&lt;/span&gt;3.10 numpy pandas
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="activate-and-deactivate"&gt;Activate and deactivate&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda activate myenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda deactivate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="list-and-remove-environments"&gt;List and remove environments&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env list
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Remove the environment and all packages inside it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda remove -n myenv --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="install-and-remove-packages"&gt;Install and remove packages&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda install numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda install &lt;span style="color:#bb60d5"&gt;numpy&lt;/span&gt;&lt;span style="color:#666"&gt;=&lt;/span&gt;1.26
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda remove numpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="update-packages"&gt;Update packages&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda update numpy
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda update conda
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda update --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="export-and-recreate-an-environment"&gt;Export and recreate an environment&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Export the environment, including channel information&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env &lt;span style="color:#007020"&gt;export&lt;/span&gt; &amp;gt; environment.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#60a0b0;font-style:italic"&gt;# Recreate the environment from the exported file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda env create -f environment.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="clone-an-environment-and-inspect-packages"&gt;Clone an environment and inspect packages&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda create --name newenv --clone oldenv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>About me</title><link>https://zhaofanbo.com/en/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/about/</guid><description>&lt;p&gt;Hi, I’m &lt;strong&gt;Fanbo Zhao&lt;/strong&gt;, a &lt;strong&gt;second-year undergraduate in artificial intelligence at Fudan University&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;My interests include &lt;strong&gt;embodied intelligence, reinforcement learning, multimodal perception, and biologically inspired vision&lt;/strong&gt;. I’m particularly interested in how sensory information helps an agent act in its environment.&lt;/p&gt;
+&lt;p&gt;My current project exploration centers on &lt;a href="https://zhaofanbo.com/en/projects/smartfly/"&gt;SmartFly&lt;/a&gt;: fly-inspired navigation in simulation, combining visual, odor, and wind information, with a planned comparison of CNN and FlyVis visual encoders. This is ongoing work; the project page distinguishes implemented components and stabilization replays from research questions still awaiting evaluation.&lt;/p&gt;</description></item><item><title>Get in touch</title><link>https://zhaofanbo.com/en/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/en/contact/</guid><description>&lt;p&gt;Have a research or internship opportunity in mind, or simply want to talk about AI? I’d love to hear from you.&lt;/p&gt;
+&lt;p&gt;&lt;a href="mailto:zhaofanbo618@gmail.com"&gt;zhaofanbo618@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/FanboZhao/"&gt;GitHub · FanboZhao&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
