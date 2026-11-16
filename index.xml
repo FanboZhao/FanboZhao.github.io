@@ -1,63 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵凡博</title><link>https://zhaofanbo.com/</link><description>Recent content on 赵凡博</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaofanbo.com/index.xml" rel="self" type="application/rss+xml"/><item><title>SmartFly：从感知到行动</title><link>https://zhaofanbo.com/projects/smartfly/</link><pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/projects/smartfly/</guid><description>&lt;p&gt;&lt;strong&gt;进行中的研究项目 · 2026 年 8 月阶段记录&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;SmartFly 围绕一个问题展开：&lt;strong&gt;智能体如何利用视觉、气味与风信息，在环境中保持稳定并找到目标？&lt;/strong&gt; 项目以 MuJoCo 果蝇飞行仿真为载体，将高层导航策略与冻结的底层飞行控制器结合，探索感知、记忆与行动之间的联系。&lt;/p&gt;</description></item><item><title>Anydesk在ubuntu22.04上无法正常远程连接</title><link>https://zhaofanbo.com/posts/anydesk/</link><pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/posts/anydesk/</guid><description>&lt;h1 id="issue"&gt;Issue&lt;/h1&gt;
-&lt;p&gt;在用其他电脑远程连接&lt;code&gt;ubuntu22.04&lt;/code&gt;上的&lt;code&gt;Anydesk&lt;/code&gt;时无法正常连接，显示&lt;code&gt;The session has ended.Status: display_server_not_supported&lt;/code&gt;
-并且&lt;code&gt;ubuntu&lt;/code&gt;端的部分涉及安全的设置无法解锁。&lt;/p&gt;</description></item><item><title>Conda配置环境命令</title><link>https://zhaofanbo.com/posts/conda/</link><pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/posts/conda/</guid><description>&lt;h1 id="conda-虚拟环境命令"&gt;Conda 虚拟环境命令&lt;/h1&gt;
-&lt;h2 id="-创建环境"&gt;📦 创建环境&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 创建一个新环境
-conda create -n myenv python=3.10
-
-# 创建环境并安装指定包
-conda create -n myenv python=3.10 numpy pandas
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-激活与退出环境"&gt;🚀 激活与退出环境&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 激活环境
-conda activate myenv
-
-# 退出当前环境
-conda deactivate
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-查看环境"&gt;🔍 查看环境&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 查看所有虚拟环境
-conda env list
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-删除环境"&gt;🧹 删除环境&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 删除整个环境
-conda remove -n myenv --all
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-安装--卸载包"&gt;📥 安装 / 卸载包&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 安装包
-conda install numpy
-
-# 安装指定版本的包
-conda install numpy=1.26
-
-# 卸载包
-conda remove numpy
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-更新操作"&gt;🔄 更新操作&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 更新某个包
-conda update numpy
-
-# 更新 conda 自身
-conda update conda
-
-# 更新环境中所有包
-conda update --all
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-导出与导入环境"&gt;📄 导出与导入环境&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 导出环境配置到文件（包含 channel 信息）
-conda env export &amp;gt; environment.yml
-
-# 根据配置文件重新创建环境
-conda env create -f environment.yml
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-其他实用命令"&gt;🧰 其他实用命令&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;# 克隆一个已有环境
-conda create --name newenv --clone oldenv
-
-# 查看当前环境中的包
-conda list
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;</description></item><item><title>关于我</title><link>https://zhaofanbo.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/about/</guid><description>&lt;p&gt;你好，我是 &lt;strong&gt;赵凡博（Fanbo Zhao）&lt;/strong&gt;，目前在&lt;strong&gt;复旦大学&lt;/strong&gt;就读人工智能专业本科二年级。&lt;/p&gt;
-&lt;p&gt;我关注&lt;strong&gt;具身智能、强化学习、多模态感知与生物启发视觉&lt;/strong&gt;，尤其好奇感知信息如何帮助智能体在环境中做出行动。&lt;/p&gt;</description></item><item><title>联系我</title><link>https://zhaofanbo.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/contact/</guid><description>&lt;p&gt;如果你有合适的科研或实习机会，或想聊聊 AI，欢迎写信给我。&lt;/p&gt;
-&lt;p&gt;&lt;a href="mailto:zhaofanbo618@gmail.com"&gt;zhaofanbo618@gmail.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/FanboZhao/"&gt;GitHub · FanboZhao&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>赵凡博</title><link>https://zhaofanbo.com/</link><description>Recent content on 赵凡博</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://zhaofanbo.com/index.xml" rel="self" type="application/rss+xml"/><item><title>ConnectomeFlight：生物启发的具身导航</title><link>https://zhaofanbo.com/projects/connectomeflight/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/projects/connectomeflight/</guid><description>&lt;p&gt;&lt;strong&gt;进行中的研究 · 尚未发表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ConnectomeFlight 以数字果蝇为载体，关注&lt;strong&gt;生物视觉与多感官信息如何支持智能体在环境中感知和行动&lt;/strong&gt;。项目结合仿真研究与可视化工具，探索生物启发智能与具身导航之间的联系。&lt;/p&gt;</description></item><item><title>关于我</title><link>https://zhaofanbo.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/about/</guid><description>&lt;h2 id="学习背景"&gt;学习背景&lt;/h2&gt;
+&lt;p&gt;我是 &lt;strong&gt;赵凡博（Fanbo Zhao）&lt;/strong&gt;，目前在&lt;strong&gt;复旦大学&lt;/strong&gt;就读人工智能专业本科。&lt;/p&gt;
+&lt;p&gt;这个网站介绍我的研究兴趣与项目概况。&lt;/p&gt;
+&lt;h2 id="research"&gt;研究兴趣&lt;/h2&gt;
+&lt;p&gt;我关注生物启发智能、多模态感知与具身导航，希望理解生物学线索与多感官信息如何帮助智能体感知环境并行动。&lt;/p&gt;</description></item><item><title>联系我</title><link>https://zhaofanbo.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaofanbo.com/contact/</guid><description>&lt;p&gt;欢迎联系生物启发智能、具身智能或多模态感知相关的科研与实习机会，也欢迎交流项目实践和学习经验。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;邮箱：&lt;/strong&gt; &lt;a href="mailto:zhaofanbo618@gmail.com"&gt;zhaofanbo618@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub：&lt;/strong&gt; &lt;a href="https://github.com/FanboZhao/"&gt;FanboZhao&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;来信时可以简要介绍你的研究方向或想交流的问题，方便我们开始讨论。&lt;/p&gt;</description></item></channel></rss>
